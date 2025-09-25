@@ -7,13 +7,39 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/meus_contatos_main"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:layout_marginBottom="8dp"/>
+
+        <Button
+            android:id="@+id/btInserir"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/novo_contato"
+            android:layout_marginBottom="10dp"/>
+
+        <Button
+            android:id="@+id/btLimpar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/apagar_todos"
+            android:layout_marginBottom="10dp"/>
+
+
+        <ListView
+            android:id="@+id/lvContatos"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
